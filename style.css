@@ -1,0 +1,106 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: whitesmoke;
+}
+.component {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+}
+.component > .write > .title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.component > .write > .flex {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+.input-set.-text {
+  flex: 1;
+}
+.input-set.-text > input {
+  width: 100%;
+  padding: 8px;
+  border-width: 1px;
+  border : 3px solid #000;
+}
+
+
+
+.todo {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.content {
+  flex: 1;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; */
+  font-weight: bold;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  min-height: 44px;
+  padding: 0px 10px;
+  box-shadow: 1px 1px 2px #00000093;
+}
+.list.check .content {
+  text-decoration: line-through;
+  color: gray;
+}
+.list.check .input-set.-chk > label::after {
+  content: 'V';
+  background-color: gray;
+  border-color: gray;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+.input-set.-chk > input {
+  display: none;
+}
+.input-set.-chk > label::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 999px;
+}
+
+
+
+.btn-send {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.btn-remove {
+  background-color: #000;
+  font-weight: bold;
+  width: 16px;
+  height: 5px;
+  border: none;
+  flex-shrink: 0;
+  cursor: pointer;
+}
